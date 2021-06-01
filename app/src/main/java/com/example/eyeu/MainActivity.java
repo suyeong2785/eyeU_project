@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        lightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Alarm_activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
