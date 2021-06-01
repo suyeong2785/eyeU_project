@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class eyeRecoveryImage extends AppCompatActivity {
+public class EyeRecoveryImage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

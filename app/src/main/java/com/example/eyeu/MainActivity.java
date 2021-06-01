@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         oldEyeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,oldeye_activity.class);
+                Intent intent = new Intent(MainActivity.this, Oldeye_activity.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, eyeRecoveryVideo.class);
+                Intent intent = new Intent(MainActivity.this, EyeRecoveryVideo.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, eyeRecoveryImage.class);
+                Intent intent = new Intent(MainActivity.this, EyeRecoveryImage.class);
                 startActivity(intent);
             }
         });
