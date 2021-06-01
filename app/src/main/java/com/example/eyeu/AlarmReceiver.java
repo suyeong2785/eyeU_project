@@ -56,16 +56,19 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
         }else builder.setSmallIcon(R.mipmap.ic_launcher); // Oreo 이하에서 mipmap 사용하지 않으면 Couldn't create icon: StatusBarIcon 에러남
 
+        Date dt = new Date();
+        SimpleDateFormat full_sdf = new SimpleDateFormat("yyyy-MM-dd, hh:mm");
 
         builder.setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
 
                 .setTicker("{Time to watch some cool stuff!}")
-                .setContentTitle("상태바 드래그시 보이는 타이틀")
-                .setContentText("상태바 드래그시 보이는 서브타이틀")
+                .setContentTitle(full_sdf.format(dt).toString() + "알람입니다.")
+                .setContentText(full_sdf.format(dt).toString() + "알람입니다.")
                 .setContentInfo("INFO")
                 .setContentIntent(pendingI);
+
 
         if (notificationManager != null) {
 
@@ -85,6 +88,8 @@ public class AlarmReceiver extends BroadcastReceiver {
             Date currentDateTime = nextNotifyTime.getTime();
             String date_text = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
             Toast.makeText(context.getApplicationContext(),"다음 알람은 " + date_text + "으로 알람이 설정되었습니다!", Toast.LENGTH_SHORT).show();
+
+
         }
     }
 
